@@ -1,0 +1,7 @@
+name: vision
+does: face tracking (turns the neck), person_entered / person_left / office_empty, motion_after_hours
+reads: [camera]
+writes: [events, body.look]
+effects: none
+leaves_this_mac: text_only   # frames stay in memory and are dropped; snap saves locally only
+risk: low

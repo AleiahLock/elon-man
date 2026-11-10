@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+core/.env
+snaps/
+*.jsonl
+*.stl
+*.3mf
+*.gcode
+.DS_Store
+build/

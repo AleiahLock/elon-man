@@ -1,0 +1,19 @@
+group,part,qty,approx_usd,notes
+head,Round display with built-in ESP32-S3 (2.1in 480x480 or similar),1,35,Face and controller in one. Needs the vendor display driver (see docs/04-firmware.md)
+head,BUDGET: ESP32-S3 DevKit + 1.28in GC9A01 round display (240x240 SPI),1,15,The firmware in this repo drives this one out of the box
+head,Small USB webcam 1080p,1,15-40,Remove the case so it fits the head slot
+neck,MG996R servo,1,8,Pan (left/right). Mount it in the body
+neck,MG90S metal-gear micro servo,2,8,Left and right push rods (nod + tilt)
+neck,2 mm steel or brass rod 100 mm,2,3,Push rods
+neck,M2 ball link,4,3,Rod ends
+neck,608 bearing,1,1,Pan joint
+voice,USB speakerphone with echo cancelling,1,25-60,Mic + speaker in one. Echo cancelling is what makes barge-in work
+power,5V 4A power supply (barrel or terminal),1,10,Servos only. Never power servos from the board USB
+power,1000 uF 10V+ electrolytic capacitor,1,1,Across servo 5V and GND near the servos
+power,Powered USB hub (4 ports),1,15,Board + camera + speakerphone on one cable to the Mac
+power,Dupont wires + small perfboard + heat-shrink,1,5,
+print,PLA or PETG red,350 g,8,Body and head shell
+print,PLA black,120 g,3,Base
+print,PLA gold or yellow,20 g,1,Chest chevrons
+print,PETG any color,60 g,2,Neck yoke and servo mounts
+fasteners,M2 + M3 screw kit and M3 heat-set inserts,1,10,

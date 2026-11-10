@@ -1,0 +1,7 @@
+name: voice
+does: wake word, speech to text (local), live reply through the xAI API, barge-in
+reads: [microphone]
+writes: [events, body.face, speaker]
+effects: none
+leaves_this_mac: text_only   # audio is transcribed locally; only the text goes to the xAI API
+risk: low

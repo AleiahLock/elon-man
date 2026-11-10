@@ -1,0 +1,7 @@
+name: mail_bridge
+does: sends spoken jobs to the Grok Bot email alias, reads the Bot's replies aloud
+reads: [robot_mailbox]
+writes: [events, speaker, email_to_bot_only]
+effects: sends email to one fixed address (BOT_EMAIL) and nowhere else
+leaves_this_mac: text_only
+risk: medium

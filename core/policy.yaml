@@ -1,0 +1,31 @@
+# Elon Man policy. The core reads this on start and refuses anything not listed.
+# After you're happy with it, lock it so nothing can edit it, including the robot:
+#   chflags uchg core/policy.yaml      (unlock: chflags nouchg core/policy.yaml)
+
+cli:
+  # The only commands the elonman CLI and the MCP server accept.
+  allowed: [ping, status, say, look, face, events, snap]
+  # Results of these never leave the Mac: snap returns a local path, never image data.
+  local_only: [snap]
+
+limits:
+  pan: [-60, 60]
+  nod: [-20, 25]
+  tilt: [-20, 20]
+  say_max_chars: 400
+  events_max: 200
+
+# Named directions for "elonman look <name>": [pan, nod]
+directions:
+  left: [40, 0]
+  right: [-40, 0]
+  center: [0, 0]
+  up: [0, 20]
+  down: [0, -15]
+
+moods: [sleep, idle, listen, think, talk, happy, alert]
+
+# Verbs that always come back to the human. Enforced on the Grok Bot side by
+# approvals and the rules block (grok-bot/rules.txt). Listed here so the voice
+# brain never claims it did one of them.
+always_ask: [send, publish, pay, delete, sign, trade, unlock]

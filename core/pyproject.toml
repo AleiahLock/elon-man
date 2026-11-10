@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elonman"
+version = "0.1.0"
+description = "Core service for the Elon Man desk robot: HAL, event bus, plugins, CLI and MCP server for Grok Bot"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "pyserial>=3.5",
+  "pyyaml>=6.0",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+vision = ["opencv-python>=4.9", "numpy>=1.26"]
+voice = ["sounddevice>=0.4.6", "numpy>=1.26", "openwakeword>=0.6", "faster-whisper>=1.0", "openai>=1.40"]
+mcp = ["mcp>=1.9", "uvicorn>=0.30"]
+dev = ["pytest>=8"]
+all = ["elonman[vision,voice,mcp,dev]"]
+
+[project.scripts]
+elonman = "elonman.cli:main"
+
+[tool.setuptools]
+packages = ["elonman", "elonman.plugins"]
